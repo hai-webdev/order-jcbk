@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+    <section class="project-container">
+      <div class="cate">
+        <div class="title wow fadeInLeft">
+          案例
+          <div class="en">Cases</div>
+        </div>
+        <div class="filter-wrap wow fadeInRight">
+          <div class="filter">
+            <span>时间
+              <i class="iconfont icon-xiala"></i>
+            </span>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <a href="javascript:;">2020-2021</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">2018-2019</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">2016-2017</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">2014-2015</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">2012-2013</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">2010-2011</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter">
+            <span>类别
+              <i class="iconfont icon-xiala"></i>
+            </span>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <a href="javascript:;">类别1</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">类别2</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">类别3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter">
+            <span>区域
+              <i class="iconfont icon-xiala"></i>
+            </span>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <a href="javascript:;">北京</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">上海</a>
+              </li>
+              <li class="filter-item">
+                <a href="javascript:;">天津</a>
+              </li>
+            </ul>
+          </div>
+          <form action="">
+            <label for="">
+              <input type="text">
+              <button type="submit">
+                <i class="iconfont icon-sousuo"></i>
+              </button>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="center project-main">
+        <div class="main-content">
+          <div class="main-view">
+            <div class="swiper-container project-swiper wow fadeInRight">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide" style="background-image:url(/public/img/banner01.jpg)"></li>
+                <li class="swiper-slide" style="background-image:url(/public/img/banner02.jpg)"></li>
+                <li class="swiper-slide" style="background-image:url(/public/img/banner03.jpg)"></li>
+                <li class="swiper-slide" style="background-image:url(/public/img/banner04.jpg)"></li>
+                <li class="swiper-slide" style="background-image:url(/public/img/banner05.jpg)"></li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="img" style="background-image:url(/public/img/banner01.jpg)"></div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="img" style="background-image:url(/public/img/banner02.jpg)"></div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="img" style="background-image:url(/public/img/banner03.jpg)"></div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="img" style="background-image:url(/public/img/banner04.jpg)"></div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="img" style="background-image:url(/public/img/banner05.jpg)"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="project-info">
+              <div class="pro-titles">
+                <div class="pro-title">
+                  <div class="cn">泰州职业技术学院</div>
+                  <div class="en">TAIZHOU POLYTECHINC COLLEGE</div>
+                </div>
+                <div class="share-wrap">
+                  分享：<div class="social-share" data-disabled="google,twitter,facebook,linkedin,douban,dian"></div>
+                </div>
+
+              </div>
+              <dl>
+                <dd>项目位置：中国泰州</dd>
+                <dd>项目规模：26万平方米</dd>
+                <dd>设计时间：2014年</dd>
+              </dl>
+              <div class="note">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi adipisci suscipit delectus magnam
+                  temporibus quasi a cumque veritatis voluptates, sit et facilis odit magni, aliquid facere dolor porro
+                  perspiciatis soluta?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 引入公共页尾 -->
+    <%= require("html-loader!../common/footer/index.html") %>
+</body>
+
+</html>

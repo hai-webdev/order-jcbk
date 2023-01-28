@@ -1,0 +1,150 @@
+@import "../../assets/global.less";
+section.project-container {
+  padding: 0 calc(30px - 0.5rem) 30px;
+  box-sizing: border-box;
+  .cate {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;
+      .en {
+        display: inline;
+        text-transform: uppercase;
+      }
+    }
+    .filter-wrap {
+        display: flex;
+        justify-content: space-between;
+      .filter {
+          position: relative;
+          
+          z-index: 99;
+        span {
+            display: block;
+            padding: 0 30px;
+            cursor: pointer;
+            i.iconfont{
+              font-size: .3em;
+            }
+        }
+        ul.filter-list {
+            background-color: #fff;
+            padding-top: 10px;
+            display: none;
+            position: absolute;
+            left: 50%;
+            max-height: 500px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            &::-webkit-scrollbar{
+              width: 3px;
+              height: 100%;
+            }
+            &::-webkit-scrollbar-thumb{
+              width: 3px;
+              height: 3px;
+              background-color: #000;
+            }
+            &::-webkit-scrollbar-track{
+              width: 3px;
+              height: 100%;
+              background-color: #999;
+            }
+            transform: translateX(-50%);
+            li.filter-item{
+                white-space: nowrap;
+                font-size: 12px;
+                padding: 5px 20px;
+                line-height: 2;
+                text-align: center;
+                a{
+                    color: inherit;
+                }
+                &:hover{
+                    color: white;
+                    background-color: #000;
+                }
+            }
+        }
+      }
+      form {
+        label {
+          display: block;
+          border: 1px solid #ddd;
+          height: 24px;
+          width: 160px;
+          margin-left: 40px;
+          border-radius: 4px;
+          overflow: hidden;
+          position: relative;
+          input {
+            border: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+          }
+          button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            transform: translateY(-50%);
+            i.iconfont {
+              color: #ccc;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  ul.project-list {
+    li.project-item {
+      a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        .img {
+          padding-top: 100%;
+          .bgImg(cover);
+        }
+        .title {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          text-align: center;
+          font-size: 14px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //   padding: 10px 0;
+          height: 100%;
+          transition: 0.6s;
+          transform: translateY(100%);
+        }
+      }
+      &:hover {
+        a {
+          .title {
+            // height: 100%;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./m768.less" screen and (max-width: 768px);

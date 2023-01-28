@@ -1,0 +1,202 @@
+@import "../../../assets/global.less";
+
+:root {
+  font-size: 14px;
+  color: #999;
+}
+header {
+  .pc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a.logo {
+      height: 68px;
+      img {
+        height: 100%;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      a {
+        color: #999;
+        padding: 0 30px;
+        transition: 0.6s;
+        line-height: 68px;
+        height: 68px;
+        position: relative;
+        &::after {
+          content: "";
+          position: relative;
+          display: block;
+          bottom: 2px;
+          width: 0;
+          opacity: 0;
+          height: 2px;
+          background-color: @mainColor;
+          transition: 0.6s;
+        }
+        &:hover {
+          color: @mainColor;
+          &::after {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    form {
+      label {
+        display: block;
+        border: 1px solid #ddd;
+        height: 32px;
+        width: 220px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        input {
+          border: none;
+          display: block;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          padding-left: 10px;
+          box-sizing: border-box;
+        }
+        button {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          transform: translateY(-50%);
+          i.iconfont {
+            color: #ccc;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .right {
+      a {
+        position: relative;
+        padding: 0 15px;
+        color: #999;
+        transition: 0.6s;
+        &:hover {
+          color: @mainColor;
+        }
+        &:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 80%;
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+  .m-head {
+    background-color: #fff;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    .head-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      .logo {
+        height: 68px;
+        img {
+          height: 100%;
+        }
+      }
+      .menu {
+        span {
+          display: block;
+          width: 36px;
+          height: 4px;
+          background-color: @mainColor;
+          margin-bottom: 4px;
+          transition: 0.6s;
+        }
+        &.active {
+          span {
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:first-child {
+              transform: translateY(10px) rotate(45deg);
+            }
+            &:last-child {
+              transform: translateY(-6px) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .head-body {
+      width: 100%;
+      position: fixed;
+      top: 68px;
+      height: 100%;
+      background-color: #fff;
+      display: none;
+      padding-top: 50px;
+      nav {
+        a {
+          display: block;
+          text-align: center;
+          line-height: 2;
+          padding: 10px 0;
+        }
+      }
+      form {
+        margin-top: 30px;
+        label {
+          display: block;
+          width: 70%;
+          max-width: 320px;
+          height: 32px;
+          line-height: 32px;
+          border-radius: 6px;
+          margin: 0 auto;
+          border: 1px solid #ddd;
+          overflow: hidden;
+          position: relative;
+          input {
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+          }
+          button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            transform: translateY(-50%);
+            i.iconfont {
+              color: #ccc;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./m1200.less" screen and (max-width: 1200px);
